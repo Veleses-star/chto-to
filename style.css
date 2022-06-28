@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+*::selection {
+  background: rgba(55,70,55,0);
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	font-size: 16px;
+	color: #000;
+}
+
+.wrapper {
+	background: url("https://img2.akspic.ru/crops/8/0/1/8/6/168108/168108-poster-graficeskij_dizajn-svet-osveshhenie-pryamougolnik-3840x2160.jpg") fixed no-repeat;
+	background-size: cover;
+	min-height: 100%;
+}
+
+.field {
+	background-color: rgba(0,0,0,0.5);
+	border: 1px solid yellow;
+	border-top: 0;
+	border-radius: 0 0 10px 10px;
+	width: 80vw;
+	height: 80vh;
+	margin: auto;
+}
+
+#triggerImg {
+	background: url("https://img3.akspic.ru/crops/0/0/1/8/6/168100/168100-spiral-matematika-krasochnost-purpur-zhidkiy-840x560.jpg") fixed;
+	border: 1px solid rgba(255,255,255,0.5);
+	border-radius: 30px;
+	width: 10vw;
+	height: 20vh;
+	margin: 20px;
+	display: inline-block;
+	cursor: pointer;
+	transition: all 0.5s ease-out;
+}
+
+#triggerImg:hover {
+	border: 1px solid lightgreen;
+}
+
+@media (max-width: 720px) {
+	.field {
+		width: 90vw;
+		height: 90vh;
+	}
+	#triggerImg {
+		width: 10vw;
+		height: 5vh;
+		border-radius: 10px;
+	}
+}
