@@ -41,22 +41,45 @@ body {
 	line-height: 1;
 	font-size: 16px;
 	color: #000;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://catherineasquithgallery.com/uploads/posts/2021-02/1613514479_5-p-foni-dlya-prezentatsii-kompyuternaya-tema-5.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: block;
 }
 
 .wrapper {
 	background: url("https://img2.akspic.ru/crops/8/0/1/8/6/168108/168108-poster-graficeskij_dizajn-svet-osveshhenie-pryamougolnik-3840x2160.jpg") fixed no-repeat;
 	background-size: cover;
 	min-height: 100%;
+	display: inline-block
 }
 
 .field {
+	display: block;
 	background-color: rgba(0,0,0,0.5);
 	border: 1px solid yellow;
 	border-top: 0;
-	border-radius: 0 0 10px 10px;
-	width: 80vw;
-	height: 80vh;
+	border-radius: 60%;
 	margin: auto;
+	--s: 250px;   /* the size of the image */
+  	--b: 8px;     /* the border thickness*/
+  	--g: 14px;    /* the gap */
+  	--c: #4ECDC4; /* the color */
+  
+	width: var(--s);
+	aspect-ratio: 1;
+	outline: calc(var(--s)/2) solid #0009;
+	outline-offset: calc(var(--s)/-2);
+	cursor: pointer;
+	transition: 0.3s;
+	padding: 50px;
+
+	align-items: center;
+}
+
+.field:hover {
+	outline: var(--b) solid var(--c);
+  	outline-offset: var(--g);
 }
 
 #triggerImg {
@@ -65,10 +88,22 @@ body {
 	border-radius: 30px;
 	width: 10vw;
 	height: 20vh;
-	margin: 20px;
 	display: inline-block;
 	cursor: pointer;
 	transition: all 0.5s ease-out;
+	
+}
+#triggerImg:hover {
+	box-shadow:
+    1px 1px #53ea93,
+    2px 2px #53ea93,
+    3px 3px #53ea93,
+    4px 4px #53ea93,
+    5px 5px #53ea93,
+    6px 6px #53ea93,
+    7px 7px #53ea93;
+  -webkit-transform: translateX(-7px);
+  transform: translateX(-7px);
 }
 
 #triggerImg:hover {
